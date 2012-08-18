@@ -1,0 +1,2 @@
+module XptosHelper
+end

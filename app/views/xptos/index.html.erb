@@ -1,0 +1,23 @@
+<h1>Listing xptos</h1>
+
+<table>
+  <tr>
+    <th>A</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @xptos.each do |xpto| %>
+  <tr>
+    <td><%= xpto.a %></td>
+    <td><%= link_to 'Show', xpto %></td>
+    <td><%= link_to 'Edit', edit_xpto_path(xpto) %></td>
+    <td><%= link_to 'Destroy', xpto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Xpto', new_xpto_path %>

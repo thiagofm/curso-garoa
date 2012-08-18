@@ -1,0 +1,22 @@
+<h1>Contato</h1>
+<%= form_for @message do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.label :nome %>
+  <%= f.text_field :nome %><br />
+  <%= f.label :email %>
+  <%= f.text_field :email %><br />
+  <%= f.label :mensagem %>
+  <%= f.text_area :mensagem %><br />
+
+  <%= f.submit %>
+  <!--
+  <%= label_tag 'Nome' %>
+  <%= text_field_tag 'nome' %><br />
+  <%= label_tag 'Email' %>
+  <%= text_field_tag 'email' %><br />
+  <%= label_tag 'Mensagem' %>
+  <%= text_area_tag 'mensagem' %><br />
+  <%= submit_tag 'Enviar' %>
+  -->
+<% end %>

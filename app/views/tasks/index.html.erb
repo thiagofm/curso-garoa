@@ -1,0 +1,19 @@
+<h1>Tarefas</h1>
+
+<p>Tags:
+  <% @user_tags.each do |tag| %>
+    <%= link_to '#' << tag, tasks_path({:tag => tag}), :remote => true  %>
+  <% end %>
+</p>
+
+<ul id="tasks">
+  <%= render :partial => 'task_list' %>
+</ul>
+<br />
+
+<!-- 
+<%= link_to 'Adicionar nova tarefa', new_task_path %>
+-->
+
+<%= render :partial => 'new' %>
+

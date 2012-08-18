@@ -1,0 +1,11 @@
+<h1>Contatos</h1>
+<%= imprime_ou_nao? flash[:message] %>
+<% @messages.each do |message| %>
+  <b>Nome:</b><%= message.nome %><br />
+  <b>E-mail:</b/><%= message.email %><br />
+  <b>Mensagem:</b><%= message.mensagem %><br />
+  <%= link_to 'Remover', remover_contato_path(:id => message.id) %>
+  <%= link_to 'Editar', edit_message_path(:id => message.id) %>
+  <%= link_to 'Mostrar', mostrar_contato_path(:id => message.id) %>
+  <br /><br />
+<% end %>
